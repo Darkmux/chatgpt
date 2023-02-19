@@ -111,7 +111,7 @@ function arguments() {
     echo -e -n ${black}"┼────────────────────────┼
 │ ${red}PROCESSING QUESTION... ${black}│
 ┼────────────────────────┼
-"${white}
+"
     
     res=$(curl -s ${urlGPT} -H "Content-Type: application/json" -H "Authorization: Bearer ${key}" -d "{\"model\": \"text-davinci-003\", \"prompt\": \"${argument}\", \"temperature\": 0, \"max_tokens\": 1000}")
 
@@ -143,7 +143,7 @@ function interactive() {
 ┼────────────────────────┼
 │ ${red}PROCESSING QUESTION... ${black}│
 ┼────────────────────────┼
-"${white}
+"
 
     res=$(curl -s ${urlGPT} -H "Content-Type: application/json" -H "Authorization: Bearer ${key}" -d "{\"model\": \"text-davinci-003\", \"prompt\": \"${question}\", \"temperature\": 0, \"max_tokens\": 1000}")
 
