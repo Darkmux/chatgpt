@@ -79,8 +79,11 @@ if [[ ! -f ".chatGPT.API_KEY" ]]; then
 fi
 key=$(cat .chatGPT.API_KEY)
 if [[ "${key}" == "" ]]; then
-    echo -e -n ${blue}"API_KEY
-[-] >> "${black}
+    echo -e -n ${black}"┼─────────┼
+│ ${red}API_KEY ${black}│
+┼─────────┼
+│
+┼->> "${white}
     read -r key
     echo "${key}" > .chatGPT.API_KEY
     clear
